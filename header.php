@@ -1,0 +1,39 @@
+<?php
+ session_start();
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cat Portfolio</title>
+    <link rel="shortcut icon" href="images/t-logo.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/cat.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li>
+                <a href="/add-cat">Add Cat</a>
+            </li>
+            <li>
+                <a href="/appointments">Appointments</a>
+                <ul>
+                    <li><a href="/contact-us">Add Appointment</a></li>
+                </ul>
+            </li>
+            <?php if (!empty($_SESSION["userId"])): ?>
+                <li><a href="/logout">Logout</a></li>
+            <?php endif; ?>
+        </ul>
+    </nav>
+    

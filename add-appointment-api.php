@@ -29,29 +29,5 @@ if ($conn->query($sql) === TRUE) {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
-// $sqlselect = "SELECT id FROM clients WHERE first_name = $first_name AND last_name = $last_name";
-// $result = $conn->query($sqlselect);
-// echo "SELECT id FROM clients WHERE first_name = $first_name AND last_name = $last_name \n";
-// while($row = $result->fetch_assoc()) {
-//   echo "id: " . $row["id"]. " - Name: " . $row["first_name"]. " " . $row["last_name"]. "<br>";
-// }
-
-// if ($result->num_rows > 0) {
-//   // output data of each row
-//   while($row = $result->fetch_assoc()) {
-//     echo "id: " . $row["id"]. " - Name: " . $row["first_name"]. " " . $row["last_name"]. "<br>\n";
-//   }
-// } else {
-//   echo "0 results\n";
-// }
-
-    
-//     echo "New record created successfully.\n
-//     VALUES ('$first_name', '$last_name')\n";
-//     echo $result;
-//   } else {
-//     echo "Error: " . $sql . "<br>" . $conn->error;
-//   }
-
 $conn->close();
 ?>
