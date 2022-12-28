@@ -1,0 +1,11 @@
+.save-btns-state, .date-selector {
+    display: none;
+}
+
+.modify-state .save-btns-state, .modify-state .date-selector {
+    display: block;
+}
+
+.modify-state .show-btns-state, .modify-state .current-visit-date {
+    display: none;
+}
